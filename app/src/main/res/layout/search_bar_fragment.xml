@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    tools:context="com.example.yumyum.SearchBar"-->
+    <data>
+        <variable
+            name="searchBarViewModel"
+            type="com.example.yumyum.viewmodel.SearchBarViewModel" />
+    </data>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_recipe2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#BB112A">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+        <!--app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Yum yum"
+        app:titleMarginStart="100dp"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="110dp"
+        android:layout_height="160dp">
+        android:id="@+id/search_bar"
+        android:name="com.example.yumyum.view.searchBar"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:title="@string/search_title"/>
+        <menu xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+
+
+        </menu>
+    </androidx.fragment.app.FragmentContainerView>-->
+</layout>
+
+

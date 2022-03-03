@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Yum yum</string>
+    <string name="search_title">search_title</string>
+    <string name="hello">Hello</string>
+</resources>
