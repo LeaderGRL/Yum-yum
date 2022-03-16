@@ -53,13 +53,17 @@ data class getRecipeInfo(
     @Expose
     var recipeName: String,
 
-    @SerializedName("readyInTime")
+    @SerializedName("readyInMinutes")
     @Expose
     var cookingTime: Float,
 
     @SerializedName("image")
     @Expose
     var recipeImageUrl: String,
+
+    @SerializedName("dishTypes")
+    @Expose
+    var dishType: List<String>,
 )
 
 

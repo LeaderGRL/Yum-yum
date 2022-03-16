@@ -25,7 +25,7 @@ class RecipeThumbnail : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<RecipeThumbnailFragmentBinding>(inflater,
+        val binding = DataBindingUtil.inflate<com.example.yumyum.databinding.RecipeThumbnailFragmentBinding>(inflater,
             R.layout.category_nav_fragment, container, false)
         return binding.root
         //return inflater.inflate(R.layout.category_nav_fragment, container, false)

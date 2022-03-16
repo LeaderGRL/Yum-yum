@@ -1,15 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/recipeThumbnailItems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:id="@+id/recipeThumbnailBackgroundItems"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="1dp"
+        android:adjustViewBounds="true"
+        android:background="#ECEFF2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
 
+    <ImageView
+        android:id="@+id/recipeThumbnailItems"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="102dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="216dp"
+        android:src="@mipmap/time"
+        app:layout_constraintEnd_toEndOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toStartOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintTop_toTopOf="@+id/recipeThumbnailBackgroundItems" />
+
+    <TextView
+        android:id="@+id/recipeThumbnailCat"
+        android:layout_width="246dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="248dp"
+        android:fontFamily="@font/notosans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintTop_toTopOf="@+id/recipeThumbnailBackgroundItems">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/recipeNameThumbnail"
+        android:layout_width="246dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="208dp"
+        android:fontFamily="@font/notosans_regular"
+        app:layout_constraintEnd_toEndOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintTop_toTopOf="@+id/recipeThumbnailBackgroundItems">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/cookingTime"
+        android:layout_width="33dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintEnd_toEndOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintStart_toStartOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintTop_toTopOf="@+id/recipeThumbnailBackgroundItems" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="160dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="236dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/recipeThumbnailBackgroundItems"
+        app:layout_constraintTop_toTopOf="@+id/recipeThumbnailBackgroundItems" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ class getRecipe() : ApiCallback<getRecipeResponse>{
         //val call: Call<List<getRecipeResponse>> = apiInstance.getInstance().getApi()
         apiInstance.retrofit.create(IApi::class.java).recipe.enqueue(object: Callback<getRecipeResponse>{
             override fun onResponse(call: Call<getRecipeResponse>, response: Response<getRecipeResponse>){
-                println("TESTRESPONSE!")
+                println("RESPONSE!")
                 if(response.body() != null){
                     val recipeList: getRecipeResponse? = response.body()
                     val gson: Gson = Gson()

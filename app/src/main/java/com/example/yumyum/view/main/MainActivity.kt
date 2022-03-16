@@ -6,28 +6,30 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yumyum.CategoryNavAdapter
 import com.example.yumyum.R
-import com.example.yumyum.model.network.API.APIInstance
-import com.example.yumyum.model.network.API.ApiCallback
-import com.example.yumyum.model.network.API.getRecipe
-import com.example.yumyum.model.network.API.getRecipeResponse
+import com.example.yumyum.model.RecipeThumbnailBackground
+import com.example.yumyum.model.network.API.*
+import com.example.yumyum.view.ItemDecoration
 import com.example.yumyum.viewmodel.RecipeThumbnailAdapter
+//import com.example.yumyum.viewmodel.RecipeThumbnailBackgroundAdapter
 import retrofit2.Call
 import retrofit2.Callback
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class MainActivity : AppCompatActivity(), CategoryNavAdapter.ItemClickListener {
     private lateinit var adapter: CategoryNavAdapter
+    private lateinit var recipeThumbnailAdapter: RecipeThumbnailAdapter
+    //private lateinit var recipeThumbnailBackgroundAdapter: RecipeThumbnailBackgroundAdapter
     private val catName: ArrayList<String> = ArrayList()
     private val recipeImage: ArrayList<String> = ArrayList()
     private val getRecipe: getRecipe = getRecipe()
+    private val BindRecipeResponse: bindRecipeResponse = bindRecipeResponse()
     //private lateinit var recipeListView: ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,27 +58,31 @@ class MainActivity : AppCompatActivity(), CategoryNavAdapter.ItemClickListener {
         //--------TEMPS--------//
 
         //----TEMPS-RECIPE----//
-
         val recipeThumbnailRecyclerView: RecyclerView = findViewById(R.id.recipeThumbnail)
+
         val verticalLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recipeThumbnailRecyclerView.layoutManager = verticalLayoutManager
-        recipeThumbnailRecyclerView.adapter = RecipeThumbnailAdapter(this)
+        recipeThumbnailAdapter = RecipeThumbnailAdapter(this, BindRecipeResponse.recipeArray)
+        recipeThumbnailRecyclerView.adapter = recipeThumbnailAdapter
 
         //recipeImage.add()
 
         //----TEMPS-RECIPE----//
+        setRecipeThumbnail()
 
-        /*val typeface = Typeface.createFromAsset(assets, "CountrysideTwo-r9WO.ttf")
+    }
 
-        val toolbarRecipe = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar_recipe)
-        for(i in 0 until toolbarRecipe.childCount){
-            val view = toolbarRecipe.getChildAt(i)
-            if(view is TextView){
-                view.typeface = typeface
-                break
-            }
-        }*/
-
+    private fun setRecipeThumbnail(){
+        BindRecipeResponse.bindRecipeResponseCallback { result ->
+            val recipeThumbnailRecyclerView: RecyclerView = findViewById(R.id.recipeThumbnail)
+            val itemDecoration = ItemDecoration(this)
+            itemDecoration.spaceBetweenItem(0)
+            recipeThumbnailRecyclerView.addItemDecoration(itemDecoration)
+            val verticalLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            recipeThumbnailRecyclerView.layoutManager = verticalLayoutManager
+            recipeThumbnailAdapter = RecipeThumbnailAdapter(this, result)
+            recipeThumbnailRecyclerView.adapter = recipeThumbnailAdapter
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

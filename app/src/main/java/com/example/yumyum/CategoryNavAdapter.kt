@@ -36,10 +36,6 @@ public class CategoryNavAdapter(context: Context, cat: List<String>) : RecyclerV
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cat = catName[position]
         holder.textView.text = cat
-        println("onBindPos : $position")
-        println("holderPos : ${holder.bindingAdapterPosition}")
-        println("holderPos : ${holder.selectedPos}")
-        println("------------------")
 
         if(holder.selectedPos == holder.bindingAdapterPosition){
             holder.textView.paintFlags = Paint.UNDERLINE_TEXT_FLAG

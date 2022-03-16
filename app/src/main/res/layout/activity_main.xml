@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".view.main.MainActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <!--<androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_recipe"
@@ -22,29 +23,43 @@
 
         </androidx.appcompat.widget.Toolbar>-->
 
+
+        <!--<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recipeThumbnailBackground"
+            android:layout_width="293dp"
+            android:layout_height="503dp"
+            android:layout_marginTop="137dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/CatNavBar"
+            app:layout_constraintVertical_bias="0.0" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recipeThumbnail"
+            android:layout_width="340dp"
+            android:layout_height="560dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CatNavBar"
+            app:layout_constraintVertical_bias="0.6" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/CatNavBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        </androidx.recyclerview.widget.RecyclerView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recipeThumbnail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        </androidx.recyclerview.widget.RecyclerView>
-
-       <!-- <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/recipeThumbnail"
-            android:name="com.example.yumyum.view.searchBar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>-->
-    </LinearLayout>
-
-
-
+            android:layout_width="366dp"
+            android:layout_height="99dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.006" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
