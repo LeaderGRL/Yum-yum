@@ -1,4 +1,4 @@
-package com.example.yumyum.view
+package com.example.yumyum.model
 
 import android.content.Context
 import android.graphics.Rect

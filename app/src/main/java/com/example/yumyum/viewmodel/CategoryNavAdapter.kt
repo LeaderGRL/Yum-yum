@@ -1,19 +1,13 @@
-package com.example.yumyum
+package com.example.yumyum.viewmodel
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.Typeface
-import android.icu.text.Transliterator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.TextView
-import androidx.core.view.allViews
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yumyum.R
 
 public class CategoryNavAdapter(context: Context, cat: List<String>) : RecyclerView.Adapter<CategoryNavAdapter.ViewHolder>() {
     private var catName: List<String> = listOf("All, Indian")

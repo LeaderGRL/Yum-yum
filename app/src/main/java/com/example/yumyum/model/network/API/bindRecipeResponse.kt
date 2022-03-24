@@ -1,6 +1,6 @@
 package com.example.yumyum.model.network.API
 
-class bindRecipeResponse {
+object bindRecipeResponse {
     public var recipeArray: ArrayList<getRecipeInfo> = ArrayList()
     public var imageRecipeUrl: ArrayList<String> = ArrayList()
     public var isComplete: Boolean = false
