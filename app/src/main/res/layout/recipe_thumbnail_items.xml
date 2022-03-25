@@ -8,6 +8,16 @@
     android:orientation="vertical">
 
     <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/recipeThumbnailBackgroundItems"
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -25,18 +35,19 @@
         android:id="@+id/recipeThumbnailItems"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="102dp"
+        android:layout_marginBottom="109dp"
         android:adjustViewBounds="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent">
+
     </ImageView>
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="208dp"
         android:src="@mipmap/time"
         app:layout_constraintEnd_toEndOf="@+id/recipeThumbnailBackgroundItems"
         app:layout_constraintHorizontal_bias="0.985"
@@ -73,9 +84,9 @@
         android:id="@+id/cookingTime"
         android:layout_width="33dp"
         android:layout_height="17dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="248dp"
         app:layout_constraintEnd_toEndOf="@+id/recipeThumbnailBackgroundItems"
-        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/recipeThumbnailBackgroundItems"
         app:layout_constraintTop_toTopOf="@+id/recipeThumbnailBackgroundItems" />
 

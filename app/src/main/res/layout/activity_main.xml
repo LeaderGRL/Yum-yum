@@ -38,8 +38,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recipeThumbnail"
-            android:layout_width="340dp"
-            android:layout_height="560dp"
+            android:layout_width="416dp"
+            android:layout_height="556dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
